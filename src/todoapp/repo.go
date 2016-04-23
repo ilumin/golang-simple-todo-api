@@ -7,8 +7,8 @@ var currentID int
 var todos Todos
 
 func init() {
-	RepoCreateTodo(Todo{Name: "Learn GO!"})
-	RepoCreateTodo(Todo{Name: "Learn write API with GO!"})
+	// RepoCreateTodo(Todo{Name: "Learn GO!"})
+	// RepoCreateTodo(Todo{Name: "Learn write API with GO!"})
 }
 
 // RepoCreateTodo create todo item
