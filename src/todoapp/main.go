@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"html"
 	"log"
@@ -24,7 +25,12 @@ func Index(w http.ResponseWriter, r *http.Request) {
 
 // TodoIndex request handler for "/todos"
 func TodoIndex(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "Todo Index!")
+	todos := Todos{
+		Todo{Name: "Learn GO"},
+		Todo{Name: "Learn to write API by GO!"},
+	}
+
+	json.NewEncoder(w).Encode(todos)
 }
 
 // TodoDetail request handler for "/todos/{todoID}"
